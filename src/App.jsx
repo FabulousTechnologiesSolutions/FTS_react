@@ -38,6 +38,7 @@ import Task from "./Pages/Task/Task";
 import AddTask from "./Pages/Task/AddTask";
 import EditTask from "./Pages/Task/EditTask";
 import TaskDetail from "./Pages/Task/TaskDetail";
+import AllProjects from "./Pages/Task/AllProjects";
 
 function App() {
   return (
@@ -85,6 +86,7 @@ function App() {
           <Route path="/add_task" element={<AddTask />} />
           <Route path="/edit_task" element={<EditTask />} />
           <Route path="/task_detail" element={<TaskDetail />} />
+          <Route path="/all_projects" element={<AllProjects />} />
         </Route>
       </Routes>
     </BrowserRouter>
