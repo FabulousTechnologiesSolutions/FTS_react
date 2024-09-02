@@ -128,8 +128,8 @@ function Main() {
 
                 <li>
                   <Link
-                    to="/tasks"
-                    className={`sidelink ${isActive(["/tasks", "/add_task", "/edit_task", "/task_detail"])}`}
+                    to="/all_projects"
+                    className={`sidelink ${isActive(["/all_projects","/tasks", "/add_task", "/edit_task", "/task_detail"])}`}
                   >
                     <div className="d-flex align-items-center">
                       <FaTasks className="sideicon me-2" />

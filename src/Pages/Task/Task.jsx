@@ -27,6 +27,8 @@ const Task = () => {
 
   return (
     <div>
+        <h3 className="mb-1 fs-3">Lease Management</h3>
+        <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel odio earum quisquam neque voluptatibus ullam, reiciendis adipisci, quidem repellendus nulla qui expedita est. Delectus alias reiciendis praesentium incidunt voluptates.</p>
       <div className="d-flex align-items-center justify-content-between">
         <h3 className="mb-0">Tasks</h3>
         <Link
