@@ -49,7 +49,7 @@ function Main() {
                 onClick={hideLeftDisplay}
               />
             </div>
-            <Link to="/" href="dashboard.html" className="logodiv px-4">
+            <Link to="/dashboard" className="logodiv px-4">
               <img src={logo} alt="" className="w-100" />
             </Link>
           </div>
