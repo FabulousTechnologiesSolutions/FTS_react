@@ -16,7 +16,7 @@ function EditTask() {
               className="form-control shadow-none focus-none py-2"
               id="TaskName"
               placeholder="Enter task name"
-              defaultValue="Develop Landing Page" // Pre-filled with dummy data
+              defaultValue="Develop Landing Page" 
             />
           </div>
 
@@ -28,7 +28,7 @@ function EditTask() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="AssignedTo"
-              defaultValue="Developer" // Pre-filled with dummy data
+              defaultValue="Developer" 
             >
               <option value="" disabled>
                 Select assignment
@@ -46,7 +46,7 @@ function EditTask() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="RelatedProject"
-              defaultValue="Project Alpha" // Pre-filled with dummy data
+              defaultValue="Project Alpha" 
             >
               <option value="" disabled>
                 Select project
@@ -65,7 +65,7 @@ function EditTask() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="Priority"
-              defaultValue="High" // Pre-filled with dummy data
+              defaultValue="High" 
             >
               <option value="" disabled>
                 Select priority level
@@ -76,16 +76,26 @@ function EditTask() {
             </select>
           </div>
 
-          {/* Due Date */}
           <div className="col-sm-6 mb-3">
-            <label htmlFor="DueDate" className="mb-0 w-100">
-              Due Date
+            <label htmlFor="StartDate" className="mb-0 w-100">
+              Start Date
             </label>
             <input
               type="date"
               className="form-control shadow-none focus-none py-2"
-              id="DueDate"
-              defaultValue="2024-03-15" // Pre-filled with dummy data
+              id="StartDate"
+              defaultValue="2024-03-15" 
+            />
+          </div>
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="EndDate" className="mb-0 w-100">
+              End Date
+            </label>
+            <input
+              type="date"
+              className="form-control shadow-none focus-none py-2"
+              id="EndDate"
+              defaultValue="2024-03-15"
             />
           </div>
 
@@ -97,7 +107,7 @@ function EditTask() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="Status"
-              defaultValue="In Progress" // Pre-filled with dummy data
+              defaultValue="In Progress" 
             >
               <option value="" disabled>
                 Select status
@@ -108,66 +118,19 @@ function EditTask() {
             </select>
           </div>
 
-          {/* Task Description */}
           <div className="col-sm-12 mb-3">
             <label htmlFor="TaskDescription" className="mb-0 w-100">
-              Task Description
+             Notes
             </label>
             <textarea
               id="TaskDescription"
               className="form-control shadow-none focus-none py-2 size"
               rows={4}
               placeholder="Provide a detailed description of the task"
-              defaultValue="Develop the landing page for the new website redesign, focusing on responsive design and high performance." // Pre-filled with dummy data
+              defaultValue="Develop the landing page for the new website redesign, focusing on responsive design and high performance." 
             ></textarea>
           </div>
 
-          {/* Task Dependencies */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="TaskDependencies" className="mb-0 w-100">
-              Task Dependencies
-            </label>
-            <input
-              type="text"
-              className="form-control shadow-none focus-none py-2"
-              id="TaskDependencies"
-              placeholder="Specify dependencies between tasks"
-              defaultValue="Design Mockup Approval" // Pre-filled with dummy data
-            />
-          </div>
-
-          {/* Time Estimation and Tracking */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="TimeEstimation" className="mb-0 w-100">
-              Time Estimation (hours)
-            </label>
-            <input
-              type="number"
-              className="form-control shadow-none focus-none py-2"
-              id="TimeEstimation"
-              placeholder="Estimate time required"
-              defaultValue="40" // Pre-filled with dummy data
-            />
-          </div>
-
-          {/* Automated Reminders */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="AutomatedReminders" className="mb-0 w-100">
-              Automated Reminders
-            </label>
-            <select
-              className="form-control shadow-none focus-none py-2"
-              id="AutomatedReminders"
-              defaultValue="2 Days Before" // Pre-filled with dummy data
-            >
-              <option value="" disabled>
-                Set reminder for upcoming or overdue tasks
-              </option>
-              <option value="1 Day Before">1 Day Before</option>
-              <option value="2 Days Before">2 Days Before</option>
-              <option value="1 Week Before">1 Week Before</option>
-            </select>
-          </div>
 
           {/* Save Button */}
           <div className="col-12">

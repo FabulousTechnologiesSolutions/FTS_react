@@ -149,7 +149,7 @@ function AddEmployee() {
                   id="project1"
                   name="projects"
                   value="Project Alpha"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked 
                 />
                 <label className="form-check-label me-2" htmlFor="project1">
                   Project Alpha
@@ -162,7 +162,7 @@ function AddEmployee() {
                   id="project2"
                   name="projects"
                   value="Project Beta"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked 
                 />
                 <label className="form-check-label me-2" htmlFor="project2">
                   Project Beta

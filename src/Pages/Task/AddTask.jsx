@@ -71,16 +71,26 @@ function AddTask() {
               <option value="High">High</option>
             </select>
           </div>
-
-          {/* Due Date */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="DueDate" className="mb-0 w-100">
-              Due Date
+ {/* Due Date */}
+ <div className="col-sm-6 mb-3">
+            <label htmlFor="StartDate" className="mb-0 w-100">
+              Start Date
             </label>
             <input
               type="date"
               className="form-control shadow-none focus-none py-2"
-              id="DueDate"
+              id="StartDate"
+            />
+          </div>
+          {/* Due Date */}
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="EndDate" className="mb-0 w-100">
+              End Date
+            </label>
+            <input
+              type="date"
+              className="form-control shadow-none focus-none py-2"
+              id="EndDate"
             />
           </div>
 
@@ -105,7 +115,7 @@ function AddTask() {
           {/* Task Description */}
           <div className="col-sm-12 mb-3">
             <label htmlFor="TaskDescription" className="mb-0 w-100">
-              Task Description
+              Notes
             </label>
             <textarea
               id="TaskDescription"
@@ -115,50 +125,7 @@ function AddTask() {
             ></textarea>
           </div>
 
-          {/* Task Dependencies */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="TaskDependencies" className="mb-0 w-100">
-              Task Dependencies
-            </label>
-            <input
-              type="text"
-              className="form-control shadow-none focus-none py-2"
-              id="TaskDependencies"
-              placeholder="Specify dependencies between tasks"
-            />
-          </div>
-
-          {/* Time Estimation and Tracking */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="TimeEstimation" className="mb-0 w-100">
-              Time Estimation (hours)
-            </label>
-            <input
-              type="number"
-              className="form-control shadow-none focus-none py-2"
-              id="TimeEstimation"
-              placeholder="Estimate time required"
-            />
-          </div>
-
-          {/* Automated Reminders */}
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="AutomatedReminders" className="mb-0 w-100">
-              Automated Reminders
-            </label>
-            <select
-              className="form-control shadow-none focus-none py-2"
-              id="AutomatedReminders"
-            >
-              <option value="" disabled selected>
-                Set reminder for upcoming or overdue tasks
-              </option>
-              <option value="1 Day Before">1 Day Before</option>
-              <option value="2 Days Before">2 Days Before</option>
-              <option value="1 Week Before">1 Week Before</option>
-            </select>
-          </div>
-
+       
           {/* Save Button */}
           <div className="col-12">
             <button

@@ -16,7 +16,6 @@ function SaleMemberDetail() {
     <div className="container mt-5">
       <h3>Sale Team Detail</h3>
       <div className="row mt-4">
-        {/* Basic Info */}
         <div className="col-sm-6 mb-3">
           <strong>Name:</strong>
           <p>{saleTeamData.name}</p>
@@ -32,7 +31,6 @@ function SaleMemberDetail() {
           <p>{saleTeamData.phone}</p>
         </div>
 
-        {/* Current Projects */}
         <div className="col-sm-6 mb-3">
           <strong>Current Projects:</strong>
           <ul>
@@ -42,7 +40,6 @@ function SaleMemberDetail() {
           </ul>
         </div>
 
-        {/* Client Accounts Managed */}
         <div className="col-sm-6 mb-3">
           <strong>Client Accounts Managed:</strong>
           <ul>
@@ -52,25 +49,21 @@ function SaleMemberDetail() {
           </ul>
         </div>
 
-        {/* Sales Metrics */}
         <div className="col-sm-6 mb-3">
           <strong>Sales Metrics:</strong>
           <p>{saleTeamData.salesMetrics}</p>
         </div>
 
-        {/* Sales Pipeline */}
         <div className="col-sm-6 mb-3">
           <strong>Sales Pipeline:</strong>
           <p>{saleTeamData.salesPipeline}</p>
         </div>
 
-        {/* Client Relationship Management */}
         <div className="col-sm-6 mb-3">
           <strong>Client Relationship Management (CRM):</strong>
           <p>{saleTeamData.crm}</p>
         </div>
 
-        {/* Incentives Tracking */}
         <div className="col-sm-6 mb-3">
           <strong>Incentives Tracking:</strong>
           <p>{saleTeamData.incentivesTracking}</p>

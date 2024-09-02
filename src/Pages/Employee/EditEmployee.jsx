@@ -6,7 +6,6 @@ function EditEmployee() {
       <h3>Edit Employee</h3>
       <form action="" className="">
         <div className="row mt-4">
-          {/* Name */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Name" className="mb-0 w-100">
               Name
@@ -20,7 +19,6 @@ function EditEmployee() {
             />
           </div>
 
-          {/* Email */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Email" className="mb-0 w-100">
               Email
@@ -34,7 +32,6 @@ function EditEmployee() {
             />
           </div>
 
-          {/* Phone */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Phone" className="mb-0 w-100">
               Phone
@@ -48,7 +45,6 @@ function EditEmployee() {
             />
           </div>
 
-          {/* Category */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Category" className="mb-0 w-100">
               Category
@@ -70,7 +66,6 @@ function EditEmployee() {
             </select>
           </div>
 
-          {/* Role */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Role" className="mb-0 w-100">
               Role
@@ -89,7 +84,6 @@ function EditEmployee() {
             </select>
           </div>
 
-          {/* Additional Category */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="AdditionalCategory" className="mb-0 w-100">
               Additional Category
@@ -108,7 +102,6 @@ function EditEmployee() {
             </select>
           </div>
 
-          {/* Skills */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Skills" className="mb-0 w-100">
               Skills
@@ -122,7 +115,6 @@ function EditEmployee() {
             />
           </div>
 
-          {/* Experience Level */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ExperienceLevel" className="mb-0 w-100">
               Experience Level
@@ -152,7 +144,7 @@ function EditEmployee() {
                   id="project1"
                   name="projects"
                   value="Project Alpha"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked 
                 />
                 <label className="form-check-label me-2" htmlFor="project1">
                   Project Alpha
@@ -165,7 +157,7 @@ function EditEmployee() {
                   id="project2"
                   name="projects"
                   value="Project Beta"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked 
                 />
                 <label className="form-check-label me-2" htmlFor="project2">
                   Project Beta
@@ -185,7 +177,6 @@ function EditEmployee() {
               </div>
             </div>
           </div>
-          {/* Workload Management */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Workload" className="mb-0 w-100">
               Workload Management
@@ -199,7 +190,6 @@ function EditEmployee() {
             />
           </div>
 
-          {/* Performance Reviews */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="PerformanceReviews" className="mb-0 w-100">
               Performance Reviews
@@ -213,7 +203,6 @@ function EditEmployee() {
             ></textarea>
           </div>
 
-          {/* Professional Development */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ProfessionalDevelopment" className="mb-0 w-100">
               Professional Development
@@ -227,7 +216,6 @@ function EditEmployee() {
             ></textarea>
           </div>
 
-          {/* Save Button */}
           <div className="col-12">
             <button
               type="submit"

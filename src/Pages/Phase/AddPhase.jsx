@@ -17,7 +17,7 @@ function AddPhase() {
               placeholder="Enter project name"
             />
           </div>
-         
+
           <div className="col-12">
             <button
               type="submit"

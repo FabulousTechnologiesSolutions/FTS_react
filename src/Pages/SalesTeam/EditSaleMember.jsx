@@ -6,7 +6,6 @@ function EditSaleMember() {
       <h3>Edit Sale Team Member</h3>
       <form action="" className="">
         <div className="row mt-4">
-          {/* Name */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Name" className="mb-0 w-100">
               Name
@@ -16,11 +15,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Name"
               placeholder="Name"
-              defaultValue="John Doe" // Pre-filled with dummy data
+              defaultValue="John Doe"
             />
           </div>
 
-          {/* Email */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Email" className="mb-0 w-100">
               Email
@@ -30,11 +28,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Email"
               placeholder="Email"
-              defaultValue="john.doe@example.com" // Pre-filled with dummy data
+              defaultValue="john.doe@example.com"
             />
           </div>
 
-          {/* Phone */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Phone" className="mb-0 w-100">
               Phone
@@ -44,11 +41,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Phone"
               placeholder="Phone"
-              defaultValue="+1 555-678-1234" // Pre-filled with dummy data
+              defaultValue="+1 555-678-1234"
             />
           </div>
 
-          {/* Current Projects */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="projects" className="mb-0 w-100">
               Current Projects
@@ -61,7 +57,7 @@ function EditSaleMember() {
                   id="project1"
                   name="projects"
                   value="First Project"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked
                 />
                 <label className="form-check-label me-2" htmlFor="project1">
                   First Project
@@ -74,7 +70,7 @@ function EditSaleMember() {
                   id="project2"
                   name="projects"
                   value="Second Project"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked
                 />
                 <label className="form-check-label me-2" htmlFor="project2">
                   Second Project
@@ -95,7 +91,6 @@ function EditSaleMember() {
             </div>
           </div>
 
-          {/* Client Accounts Managed */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="clientmanage" className="mb-0 w-100">
               Client Accounts Managed
@@ -108,7 +103,7 @@ function EditSaleMember() {
                   id="client1"
                   name="Clients"
                   value="First Client"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked
                 />
                 <label className="form-check-label me-2" htmlFor="client1">
                   First Client
@@ -121,7 +116,7 @@ function EditSaleMember() {
                   id="client2"
                   name="Clients"
                   value="Second Client"
-                  defaultChecked // Pre-checked based on dummy data
+                  defaultChecked
                 />
                 <label className="form-check-label me-2" htmlFor="client2">
                   Second Client
@@ -142,7 +137,6 @@ function EditSaleMember() {
             </div>
           </div>
 
-          {/* Sales Metrics */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Salesmetrics" className="mb-0 w-100">
               Sales Metrics
@@ -152,11 +146,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Salesmetrics"
               placeholder="Enter Track leads"
-              defaultValue="100 leads converted" // Pre-filled with dummy data
+              defaultValue="100 leads converted"
             />
           </div>
 
-          {/* Sales Pipeline */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="salespipeline" className="mb-0 w-100">
               Sales Pipeline
@@ -166,11 +159,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="salespipeline"
               placeholder="Sales process"
-              defaultValue="Q3 Sales Process" // Pre-filled with dummy data
+              defaultValue="Q3 Sales Process"
             />
           </div>
 
-          {/* Client Relationship Management */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="crm" className="mb-0 w-100">
               Client Relationship Management
@@ -180,11 +172,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="crm"
               placeholder="Detailed logs of client"
-              defaultValue="Detailed logs of all client interactions" // Pre-filled with dummy data
+              defaultValue="Detailed logs of all client interactions"
             />
           </div>
 
-          {/* Incentives Tracking */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="incentivestracking" className="mb-0 w-100">
               Incentives Tracking
@@ -194,7 +185,7 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="incentivestracking"
               placeholder="Enter commissions/bonus"
-              defaultValue="Commission: $5000, Bonus: $2000" // Pre-filled with dummy data
+              defaultValue="Commission: $5000, Bonus: $2000"
             />
           </div>
 

@@ -56,7 +56,9 @@ function AddProject() {
                 Select phase
               </option>
               <option value="Design">Design</option>
-              <option value="Front End Development">Front End Development</option>
+              <option value="Front End Development">
+                Front End Development
+              </option>
               <option value="Backend Development">Back End Development</option>
               <option value="Backend Development">Deployment</option>
             </select>
@@ -81,7 +83,7 @@ function AddProject() {
               id="EndDate"
             />
           </div>
-         
+
           <div className="col-sm-6 mb-3">
             <label htmlFor="Status" className="mb-0 w-100">
               Status
@@ -161,7 +163,7 @@ function AddProject() {
               </label>
             </div>
           </div>
-          
+
           <div className="col-sm-6 mb-3">
             <label htmlFor="Description" className="mb-0 w-100">
               Description
