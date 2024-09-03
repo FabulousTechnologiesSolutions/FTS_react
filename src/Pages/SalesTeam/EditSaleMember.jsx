@@ -1,12 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import Select from "react-select";
 
 function EditSaleMember() {
+  const projectOptions = [
+    { value: "Project 1", label: "Project 1" },
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 3", label: "Project 3" },
+    { value: "Project 4", label: "Project 4" },
+    { value: "Project 5", label: "Project 5" },
+    { value: "Project 6", label: "Project 6" },
+    { value: "Project 7", label: "Project 7" },
+  ];
+  const defaultProject = [
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 6", label: "Project 6" },
+  ];
+  const [selectedOptions, setSelectedOptions] = useState(defaultProject);
+  const handleChange = (selected) => {
+    setSelectedOptions(selected);
+  };
+  
+  const clientOptions = [
+    { value: "Client 1", label: "Client 1" },
+    { value: "Client 2", label: "Client 2" },
+    { value: "Client 3", label: "Client 3" },
+    { value: "Client 4", label: "Client 4" },
+    { value: "Client 5", label: "Client 5" },
+    { value: "Client 6", label: "Client 6" },
+    { value: "Client 7", label: "Client 7" },
+  ];
+  const defaultClient = [
+    { value: "Client 2", label: "Client 2" },
+    { value: "Client 6", label: "Client 6" },
+  ];
+  const [selectedCOptions, setSelectedCOptions] = useState(defaultClient);
+  const handleCChange = (selected) => {
+    setSelectedCOptions(selected);
+  };
   return (
     <div>
       <h3>Edit Sale Team Member</h3>
       <form action="" className="">
         <div className="row mt-4">
-          {/* Name */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Name" className="mb-0 w-100">
               Name
@@ -16,11 +51,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Name"
               placeholder="Name"
-              defaultValue="John Doe" // Pre-filled with dummy data
+              defaultValue="John Doe"
             />
           </div>
 
-          {/* Email */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Email" className="mb-0 w-100">
               Email
@@ -30,11 +64,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Email"
               placeholder="Email"
-              defaultValue="john.doe@example.com" // Pre-filled with dummy data
+              defaultValue="john.doe@example.com"
             />
           </div>
 
-          {/* Phone */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Phone" className="mb-0 w-100">
               Phone
@@ -44,105 +77,40 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Phone"
               placeholder="Phone"
-              defaultValue="+1 555-678-1234" // Pre-filled with dummy data
+              defaultValue="+1 555-678-1234"
             />
           </div>
 
-          {/* Current Projects */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="projects" className="mb-0 w-100">
               Current Projects
             </label>
-            <div id="projects" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project1"
-                  name="projects"
-                  value="First Project"
-                  defaultChecked // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="project1">
-                  First Project
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project2"
-                  name="projects"
-                  value="Second Project"
-                  defaultChecked // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="project2">
-                  Second Project
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project3"
-                  name="projects"
-                  value="Third Project"
-                />
-                <label className="form-check-label" htmlFor="project3">
-                  Third Project
-                </label>
-              </div>
-            </div>
+            <Select
+              defaultValue={defaultProject}
+              options={projectOptions}
+              isMulti
+              value={selectedOptions}
+              onChange={handleChange}
+              className="shadow-none focus-none "
+              name="projects"
+            />
           </div>
 
-          {/* Client Accounts Managed */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="clientmanage" className="mb-0 w-100">
               Client Accounts Managed
             </label>
-            <div id="clientmanage" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client1"
-                  name="Clients"
-                  value="First Client"
-                  defaultChecked // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="client1">
-                  First Client
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client2"
-                  name="Clients"
-                  value="Second Client"
-                  defaultChecked // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="client2">
-                  Second Client
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client3"
-                  name="Clients"
-                  value="Third Client"
-                />
-                <label className="form-check-label" htmlFor="client3">
-                  Third Client
-                </label>
-              </div>
-            </div>
+            <Select
+              defaultValue={defaultClient}
+              options={clientOptions}
+              isMulti
+              value={selectedCOptions}
+              onChange={handleCChange}
+              className="shadow-none focus-none "
+              name="projects"
+            />
           </div>
 
-          {/* Sales Metrics */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Salesmetrics" className="mb-0 w-100">
               Sales Metrics
@@ -152,11 +120,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="Salesmetrics"
               placeholder="Enter Track leads"
-              defaultValue="100 leads converted" // Pre-filled with dummy data
+              defaultValue="100 leads converted"
             />
           </div>
 
-          {/* Sales Pipeline */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="salespipeline" className="mb-0 w-100">
               Sales Pipeline
@@ -166,11 +133,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="salespipeline"
               placeholder="Sales process"
-              defaultValue="Q3 Sales Process" // Pre-filled with dummy data
+              defaultValue="Q3 Sales Process"
             />
           </div>
 
-          {/* Client Relationship Management */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="crm" className="mb-0 w-100">
               Client Relationship Management
@@ -180,11 +146,10 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="crm"
               placeholder="Detailed logs of client"
-              defaultValue="Detailed logs of all client interactions" // Pre-filled with dummy data
+              defaultValue="Detailed logs of all client interactions"
             />
           </div>
 
-          {/* Incentives Tracking */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="incentivestracking" className="mb-0 w-100">
               Incentives Tracking
@@ -194,7 +159,7 @@ function EditSaleMember() {
               className="form-control shadow-none focus-none py-2"
               id="incentivestracking"
               placeholder="Enter commissions/bonus"
-              defaultValue="Commission: $5000, Bonus: $2000" // Pre-filled with dummy data
+              defaultValue="Commission: $5000, Bonus: $2000"
             />
           </div>
 

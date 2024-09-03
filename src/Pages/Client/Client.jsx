@@ -32,7 +32,8 @@ const Client = () => {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h3 className="mb-0">Clients</h3>
-        <Link to="/add_client"
+        <Link
+          to="/add_client"
           className="bg-blue text-decoration-none text-white px-3 py-2 rounded-3"
         >
           Add Client
@@ -61,9 +62,7 @@ const Client = () => {
                 <td className="small">{client.industry}</td>
                 <td className="small">{client.email}</td>
                 <td className="small text-nowrap">{client.phone}</td>
-                <td className="small">
-                  {client.projectsAssigned.join(", ")}
-                </td>
+                <td className="small">{client.projectsAssigned.join(", ")}</td>
                 <td className="small">{client.paymentStatus}</td>
                 <td className="small">{client.clientPortal}</td>
                 <td className="small">

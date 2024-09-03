@@ -1,6 +1,41 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Select from "react-select";
 function EditManager() {
+  const projectOptions = [
+    { value: "Project 1", label: "Project 1" },
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 3", label: "Project 3" },
+    { value: "Project 4", label: "Project 4" },
+    { value: "Project 5", label: "Project 5" },
+    { value: "Project 6", label: "Project 6" },
+    { value: "Project 7", label: "Project 7" },
+  ];
+  const defaultProject = [
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 6", label: "Project 6" },
+  ];
+  const [selectedOptions, setSelectedOptions] = useState(defaultProject);
+  const handleChange = (selected) => {
+    setSelectedOptions(selected);
+  };
+
+  const devOptions = [
+    { value: "Developer 1", label: "Developer 1" },
+    { value: "Developer 2", label: "Developer 2" },
+    { value: "Developer 3", label: "Developer 3" },
+    { value: "Developer 4", label: "Developer 4" },
+    { value: "Developer 5", label: "Developer 5" },
+    { value: "Developer 6", label: "Developer 6" },
+    { value: "Developer 7", label: "Developer 7" },
+  ];
+  const defaultDev = [
+    { value: "Developer 2", label: "Developer 2" },
+    { value: "Developer 6", label: "Developer 6" },
+  ];
+  const [selectedDOptions, setSelectedDOptions] = useState(defaultDev);
+  const handleDChange = (selected) => {
+    setSelectedDOptions(selected);
+  };
   return (
     <div>
       <h3>Edit Manager</h3>
@@ -46,89 +81,27 @@ function EditManager() {
             <label htmlFor="projects" className="mb-0 w-100">
               Current Projects
             </label>
-            <div id="projects" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project1"
-                  name="projects"
-                  value="Project Alpha"
-                  defaultChecked  // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="project1">
-                  Project Alpha
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project2"
-                  name="projects"
-                  value="Project Beta"
-                  defaultChecked  // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="project2">
-                  Project Beta
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project3"
-                  name="projects"
-                  value="Project Gamma"
-                />
-                <label className="form-check-label" htmlFor="project3">
-                  Project Gamma
-                </label>
-              </div>
-            </div>
+            <Select
+              defaultValue={defaultProject}
+              options={projectOptions}
+              isMulti
+              value={selectedOptions}
+              onChange={handleChange}
+              className="shadow-none focus-none "
+              name="projects"
+            />
           </div>
           <div className="col-sm-6 mb-3">
             <label htmlFor="team-members">Team Members Managed:</label>
-            <div id="team-members" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member1"
-                  name="teamMembers"
-                  value="John Doe"
-                  defaultChecked  // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="member1">
-                  John Doe
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member2"
-                  name="teamMembers"
-                  value="Bob Johnson"
-                  defaultChecked  // Pre-checked based on dummy data
-                />
-                <label className="form-check-label me-2" htmlFor="member2">
-                  Bob Johnson
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member3"
-                  name="teamMembers"
-                  value="Charlie Brown"
-                />
-                <label className="form-check-label" htmlFor="member3">
-                  Charlie Brown
-                </label>
-              </div>
-            </div>
+            <Select
+              defaultValue={defaultDev}
+              options={devOptions}
+              isMulti
+              value={selectedDOptions}
+              onChange={handleDChange}
+              className="shadow-none focus-none "
+              name="developers"
+            />
           </div>
 
           <div className="col-sm-6 mb-3">

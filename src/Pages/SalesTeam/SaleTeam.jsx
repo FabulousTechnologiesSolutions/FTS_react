@@ -34,7 +34,8 @@ const SaleTeam = () => {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h3 className="mb-0">Sales Team</h3>
-        <Link to="/add_sale_member"
+        <Link
+          to="/add_sale_member"
           className="bg-blue text-decoration-none text-white px-3 py-2 rounded-3"
         >
           Add Sale Team Member
@@ -64,9 +65,7 @@ const SaleTeam = () => {
                 <td className="small">{member.name}</td>
                 <td className="small">{member.email}</td>
                 <td className="small text-nowrap">{member.phone}</td>
-                <td className="small">
-                  {member.currentProjects.join(", ")}
-                </td>
+                <td className="small">{member.currentProjects.join(", ")}</td>
                 <td className="small">
                   {member.clientAccountsManaged.join(", ")}
                 </td>

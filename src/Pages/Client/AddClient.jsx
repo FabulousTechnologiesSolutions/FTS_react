@@ -51,7 +51,6 @@ function AddClient() {
             />
           </div>
 
-          {/* Projects Assigned */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="projects" className="mb-0 w-100">
               Projects Assigned

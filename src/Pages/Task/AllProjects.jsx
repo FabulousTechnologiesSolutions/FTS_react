@@ -31,12 +31,6 @@ const AllProjects = () => {
     <div className="">
       <div className="d-flex align-items-center justify-content-between">
         <h3 className="mb-0">Projects</h3>
-        <Link
-          to="/add_project"
-          className="bg-blue text-decoration-none text-white px-3 py-2 rounded-3"
-        >
-          Add Project
-        </Link>
       </div>
       <div className="table-responsive mt-3">
         <table className="table">
@@ -68,7 +62,7 @@ const AllProjects = () => {
                   <div className="d-flex">
                   <Link
           to="/tasks"
-          className="bg-blue text-decoration-none text-white px-3 py-2 rounded-3"
+          className="bg-blue text-nowrap text-decoration-none text-white px-3 py-2 rounded-3"
         >
           View Tasks
         </Link>

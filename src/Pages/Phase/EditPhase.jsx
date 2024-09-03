@@ -13,7 +13,6 @@ const EditPhase = () => {
                     <h3>Edit Project</h3>
                     <form action="" className="">
                       <div className="row mt-4">
-                        {/* Project Name */}
                         <div className="col-sm-6 mb-3">
                           <label htmlFor="PhaseName" className="mb-0 w-100">
                             Phase Name
@@ -27,7 +26,6 @@ const EditPhase = () => {
                           />
                         </div>
 
-                        {/* Save Button */}
                         <div className="col-12">
                           <button
                             type="submit"

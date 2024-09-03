@@ -1,6 +1,25 @@
 import React from "react";
-
+import Select from "react-select";
 function AddProject() {
+  const devOptions = [
+    { value: "Developer 1", label: "Developer 1" },
+    { value: "Developer 2", label: "Developer 2" },
+    { value: "Developer 3", label: "Developer 3" },
+    { value: "Developer 4", label: "Developer 4" },
+    { value: "Developer 5", label: "Developer 5" },
+    { value: "Developer 6", label: "Developer 6" },
+    { value: "Developer 7", label: "Developer 7" },
+  ];
+  const saleOptions = [
+    { value: "Sale Member 1", label: "Sale Member 1" },
+    { value: "Sale Member 2", label: "Sale Member 2" },
+    { value: "Sale Member 3", label: "Sale Member 3" },
+    { value: "Sale Member 4", label: "Sale Member 4" },
+    { value: "Sale Member 5", label: "Sale Member 5" },
+    { value: "Sale Member 6", label: "Sale Member 6" },
+    { value: "Sale Member 7", label: "Sale Member 7" },
+  ];
+  
   return (
     <div>
       <h3>Add Project</h3>
@@ -56,7 +75,9 @@ function AddProject() {
                 Select phase
               </option>
               <option value="Design">Design</option>
-              <option value="Front End Development">Front End Development</option>
+              <option value="Front End Development">
+                Front End Development
+              </option>
               <option value="Backend Development">Back End Development</option>
               <option value="Backend Development">Deployment</option>
             </select>
@@ -81,7 +102,7 @@ function AddProject() {
               id="EndDate"
             />
           </div>
-         
+
           <div className="col-sm-6 mb-3">
             <label htmlFor="Status" className="mb-0 w-100">
               Status
@@ -111,68 +132,24 @@ function AddProject() {
           </div>
           <div className="col-sm-6 mb-3">
             <label className="mb-0 w-100">Assigned Developers</label>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input shadow-none focus-none py-2"
-                id="Developer1"
-              />
-              <label className="form-check-label ms-1" htmlFor="Developer1">
-                Developer 1
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input shadow-none focus-none py-2"
-                id="Developer2"
-              />
-              <label className="form-check-label ms-1" htmlFor="Developer2">
-                Developer 2
-              </label>
-            </div>
+            <Select
+              options={devOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              name="developer"
+            />
           </div>
           <div className="col-sm-6 mb-3">
             <label className="mb-0 w-100">Associated Sales Team Members</label>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input shadow-none focus-none py-2"
-                id="SalesTeamMember1"
-              />
-              <label
-                className="form-check-label ms-1"
-                htmlFor="SalesTeamMember1"
-              >
-                Sales Team Member 1
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                className="form-check-input shadow-none focus-none py-2"
-                id="SalesTeamMember2"
-              />
-              <label
-                className="form-check-label ms-1"
-                htmlFor="SalesTeamMember2"
-              >
-                Sales Team Member 2
-              </label>
-            </div>
+            <Select
+              options={saleOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              id="payment-status"
+              name="sale_member"
+            />
           </div>
-          
-          <div className="col-sm-6 mb-3">
-            <label htmlFor="Description" className="mb-0 w-100">
-              Description
-            </label>
-            <textarea
-              id="Description"
-              className="form-control shadow-none focus-none py-2 size"
-              rows={4}
-              placeholder="Enter detailed project description"
-            ></textarea>
-          </div>
+
           <div className="col-sm-6 mb-3">
             <label htmlFor="BudgetTracking" className="mb-0 w-100">
               Budget Tracking
@@ -215,6 +192,17 @@ function AddProject() {
               className="form-control shadow-none focus-none py-2 size"
               rows={3}
               placeholder="Document risks and mitigation strategies"
+            ></textarea>
+          </div>
+          <div className="col-12 mb-3">
+            <label htmlFor="Description" className="mb-0 w-100">
+              Description
+            </label>
+            <textarea
+              id="Description"
+              className="form-control shadow-none focus-none py-2 size"
+              rows={4}
+              placeholder="Enter detailed project description"
             ></textarea>
           </div>
           <div className="col-12">

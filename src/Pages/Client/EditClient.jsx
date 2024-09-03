@@ -6,7 +6,6 @@ function EditClient() {
       <h3>Edit Client</h3>
       <form action="" className="">
         <div className="row mt-4">
-          {/* Client Name */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ClientName" className="mb-0 w-100">
               Client Name
@@ -16,11 +15,10 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               id="ClientName"
               placeholder="Client Name"
-              defaultValue="Acme Corporation" // Pre-filled with dummy data
+              defaultValue="Acme Corporation"
             />
           </div>
 
-          {/* Industry/Business Type */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Industry" className="mb-0 w-100">
               Industry/Business Type
@@ -30,11 +28,10 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               id="Industry"
               placeholder="Industry/Business Type"
-              defaultValue="Manufacturing" // Pre-filled with dummy data
+              defaultValue="Manufacturing"
             />
           </div>
 
-          {/* Contact Information */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="Email" className="mb-0 w-100">
               Email
@@ -44,7 +41,7 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               id="Email"
               placeholder="Email"
-              defaultValue="contact@acme.com" // Pre-filled with dummy data
+              defaultValue="contact@acme.com"
             />
           </div>
 
@@ -57,11 +54,10 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               id="Phone"
               placeholder="Phone"
-              defaultValue="+1 555-123-4567" // Pre-filled with dummy data
+              defaultValue="+1 555-123-4567"
             />
           </div>
 
-          {/* Projects Assigned */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="projects" className="mb-0 w-100">
               Projects Assigned
@@ -108,7 +104,6 @@ function EditClient() {
             </div>
           </div>
 
-          {/* Payment Status */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="PaymentStatus" className="mb-0 w-100">
               Payment Status
@@ -116,14 +111,13 @@ function EditClient() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="PaymentStatus"
-              defaultValue="Paid" // Pre-filled with dummy data
+              defaultValue="Paid"
             >
               <option value="Paid">Paid</option>
               <option value="Unpaid">Unpaid</option>
             </select>
           </div>
 
-          {/* Contract Renewal Alerts */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ContractRenewalAlerts" className="mb-0 w-100">
               Contract Renewal Alerts
@@ -133,11 +127,10 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               id="ContractRenewalAlerts"
               placeholder="Notify when contracts are nearing expiration"
-              defaultValue="Next renewal in 6 months" // Pre-filled with dummy data
+              defaultValue="Next renewal in 6 months"
             />
           </div>
 
-          {/* Client Portal */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ClientPortal" className="mb-0 w-100">
               Client Portal
@@ -145,14 +138,13 @@ function EditClient() {
             <select
               className="form-control shadow-none focus-none py-2"
               id="ClientPortal"
-              defaultValue="Enabled" // Pre-filled with dummy data
+              defaultValue="Enabled"
             >
               <option value="Enabled">Enabled</option>
               <option value="Disabled">Disabled</option>
             </select>
           </div>
 
-          {/* Contract Details */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ContractDetails" className="mb-0 w-100">
               Contract Details
@@ -162,10 +154,9 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               rows={3}
               placeholder="Document contract terms and details"
-              defaultValue="Contract signed for 2 years, renewable annually." // Pre-filled with dummy data
+              defaultValue="Contract signed for 2 years, renewable annually."
             ></textarea>
           </div>
-          {/* Client Satisfaction Surveys */}
           <div className="col-sm-6 mb-3">
             <label htmlFor="ClientSatisfactionSurveys" className="mb-0 w-100">
               Client Satisfaction Surveys
@@ -175,7 +166,7 @@ function EditClient() {
               className="form-control shadow-none focus-none py-2"
               rows={3}
               placeholder="Gauge client satisfaction at various milestones"
-              defaultValue="Survey scheduled after Project Beta completion" // Pre-filled with dummy data
+              defaultValue="Survey scheduled after Project Beta completion"
             ></textarea>
           </div>
           <div className="col-12 mb-3">

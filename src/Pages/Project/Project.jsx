@@ -24,7 +24,6 @@ const Project = () => {
       endDate: "2024-11-30",
       status: "Not Started",
     },
-    // Add more project data as needed
   ];
 
   return (
