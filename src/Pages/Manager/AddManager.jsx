@@ -1,6 +1,27 @@
 import React from "react";
+import Select from "react-select";
 
 function AddManager() {
+  
+const projectOptions = [
+  { value: "Project 1", label: "Project 1" },
+  { value: "Project 2", label: "Project 2" },
+  { value: "Project 3", label: "Project 3" },
+  { value: "Project 4", label: "Project 4" },
+  { value: "Project 5", label: "Project 5" },
+  { value: "Project 6", label: "Project 6" },
+  { value: "Project 7", label: "Project 7" },
+];
+
+const devOptions = [
+  { value: "Developer 1", label: "Developer 1" },
+  { value: "Developer 2", label: "Developer 2" },
+  { value: "Developer 3", label: "Developer 3" },
+  { value: "Developer 4", label: "Developer 4" },
+  { value: "Developer 5", label: "Developer 5" },
+  { value: "Developer 6", label: "Developer 6" },
+  { value: "Developer 7", label: "Developer 7" },
+];
   return (
     <div>
       <h3>Add Manager</h3>
@@ -43,85 +64,21 @@ function AddManager() {
             <label htmlFor="projects" className="mb-0 w-100">
               Current Projects
             </label>
-            <div id="projects" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project1"
-                  name="projects"
-                  value="Project Alpha"
-                />
-                <label className="form-check-label me-2" htmlFor="project1">
-                  Project Alpha
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project2"
-                  name="projects"
-                  value="Project Beta"
-                />
-                <label className="form-check-label me-2" htmlFor="project2">
-                  Project Beta
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project3"
-                  name="projects"
-                  value="Project Gamma"
-                />
-                <label className="form-check-label" htmlFor="project3">
-                  Project Gamma
-                </label>
-              </div>
-            </div>
+            <Select
+              options={projectOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              name="projects"
+            />
           </div>
           <div className="col-sm-6 mb-3">
             <label htmlFor="team-members">Team Members Managed:</label>
-            <div id="projects" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member1"
-                  name="projects"
-                  value="Project Alpha"
-                />
-                <label className="form-check-label me-2" htmlFor="member1">
-                  Member 1
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member2"
-                  name="projects"
-                  value="Project Beta"
-                />
-                <label className="form-check-label me-2" htmlFor="member2">
-                  Member 2
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="member3"
-                  name="projects"
-                  value="Project Gamma"
-                />
-                <label className="form-check-label" htmlFor="member3">
-                  Member 3
-                </label>
-              </div>
-            </div>
+            <Select
+              options={devOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              name="projects"
+            />
           </div>
 
           <div className="col-sm-6 mb-3">

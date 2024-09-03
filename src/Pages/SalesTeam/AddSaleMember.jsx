@@ -1,6 +1,25 @@
 import React from "react";
+import Select from "react-select";
 
 function AddSaleMember() {
+  const projectOptions = [
+    { value: "Project 1", label: "Project 1" },
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 3", label: "Project 3" },
+    { value: "Project 4", label: "Project 4" },
+    { value: "Project 5", label: "Project 5" },
+    { value: "Project 6", label: "Project 6" },
+    { value: "Project 7", label: "Project 7" },
+  ];
+  const clientOptions = [
+    { value: "Client 1", label: "Client 1" },
+    { value: "Client 2", label: "Client 2" },
+    { value: "Client 3", label: "Client 3" },
+    { value: "Client 4", label: "Client 4" },
+    { value: "Client 5", label: "Client 5" },
+    { value: "Client 6", label: "Client 6" },
+    { value: "Client 7", label: "Client 7" },
+  ];
   return (
     <div>
       <h3>Add Sale Team</h3>
@@ -44,87 +63,23 @@ function AddSaleMember() {
             <label htmlFor="projects" className="mb-0 w-100">
               Current Projects
             </label>
-            <div id="projects" className="d-flex">
-              <div className="form-check me-3">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project1"
-                  name="projects"
-                  value="First project"
-                />
-                <label className="form-check-label" htmlFor="project1">
-                  First Project
-                </label>
-              </div>
-              <div className="form-check me-3">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project2"
-                  name="projects"
-                  value="Second Project"
-                />
-                <label className="form-check-label" htmlFor="project2">
-                  Second Project
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project3"
-                  name="projects"
-                  value="Third Project"
-                />
-                <label className="form-check-label" htmlFor="project3">
-                  Third Project
-                </label>
-              </div>
-            </div>
+            <Select
+              options={projectOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              name="projects"
+            />
           </div>
           <div className="col-sm-6 mb-3">
             <label htmlFor="clientmanage" className="mb-0 w-100">
               Client Accounts Managed
             </label>
-            <div id="clientmanage" className="d-flex">
-              <div className="form-check me-3">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client1"
-                  name="Clients"
-                  value="First Client"
-                />
-                <label className="form-check-label" htmlFor="client1">
-                  First Client
-                </label>
-              </div>
-              <div className="form-check me-3">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client2"
-                  name="Clients"
-                  value="Second clients"
-                />
-                <label className="form-check-label" htmlFor="client2">
-                  Second Client
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="client3"
-                  name="Clients"
-                  value="Third clients"
-                />
-                <label className="form-check-label" htmlFor="client3">
-                  Third Client
-                </label>
-              </div>
-            </div>
+            <Select
+              options={clientOptions}
+              isMulti
+              className="border-1 focus-none multi-sel"
+              name="clients"
+            />
           </div>
           <div className="col-sm-6 mb-3">
             <label htmlFor="Salesmetrics" className="mb-0 w-100">

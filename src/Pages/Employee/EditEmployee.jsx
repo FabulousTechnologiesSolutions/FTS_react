@@ -1,6 +1,23 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Select from "react-select";
 function EditEmployee() {
+  const projectOptions = [
+    { value: "Project 1", label: "Project 1" },
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 3", label: "Project 3" },
+    { value: "Project 4", label: "Project 4" },
+    { value: "Project 5", label: "Project 5" },
+    { value: "Project 6", label: "Project 6" },
+    { value: "Project 7", label: "Project 7" },
+  ];
+  const defaultProject = [
+    { value: "Project 2", label: "Project 2" },
+    { value: "Project 6", label: "Project 6" },
+  ];
+  const [selectedOptions, setSelectedOptions] = useState(defaultProject);
+  const handleChange = (selected) => {
+    setSelectedOptions(selected);
+  };
   return (
     <div>
       <h3>Edit Employee</h3>
@@ -42,6 +59,18 @@ function EditEmployee() {
               id="Phone"
               placeholder="Phone"
               defaultValue="+1 555-123-4567"
+            />
+          </div>
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="CNIC" className="mb-0 w-100">
+              CNIC
+            </label>
+            <input
+              type="text"
+              className="form-control shadow-none focus-none py-2"
+              id="CNIC"
+              placeholder="Enter CNIC"
+              defaultValue="12345-6789012-3"
             />
           </div>
 
@@ -133,51 +162,6 @@ function EditEmployee() {
             </select>
           </div>
           <div className="col-sm-6 mb-3">
-            <label htmlFor="projects" className="mb-0 w-100">
-              Projects Assigned
-            </label>
-            <div id="projects" className="d-flex">
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project1"
-                  name="projects"
-                  value="Project Alpha"
-                  defaultChecked 
-                />
-                <label className="form-check-label me-2" htmlFor="project1">
-                  Project Alpha
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project2"
-                  name="projects"
-                  value="Project Beta"
-                  defaultChecked 
-                />
-                <label className="form-check-label me-2" htmlFor="project2">
-                  Project Beta
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input shadow-none focus-none"
-                  id="project3"
-                  name="projects"
-                  value="Project Gamma"
-                />
-                <label className="form-check-label" htmlFor="project3">
-                  Project Gamma
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 mb-3">
             <label htmlFor="Workload" className="mb-0 w-100">
               Workload Management
             </label>
@@ -189,7 +173,68 @@ function EditEmployee() {
               defaultValue="3 Active Projects"
             />
           </div>
+          <div className="col-12 mb-3">
+            <label htmlFor="projects" className="mb-0 w-100">
+              Projects Assigned
+            </label>
+            <Select
+              defaultValue={defaultProject}
+              options={projectOptions}
+              isMulti
+              value={selectedOptions}
+              onChange={handleChange}
+              className="shadow-none focus-none "
+              name="projects"
+            />
+          </div>
 
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="Picture" className="mb-0 w-100">
+              Picture
+            </label>
+            <input
+              type="file"
+              className="form-control shadow-none focus-none py-2"
+              id="Picture"
+              accept="image/*"
+            />
+          </div>
+
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="AgreementPDF" className="mb-0 w-100">
+              Agreement PDF
+            </label>
+            <input
+              type="file"
+              className="form-control shadow-none focus-none py-2"
+              id="AgreementPDF"
+              accept="application/pdf"
+            />
+          </div>
+
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="Salary" className="mb-0 w-100">
+              Salary
+            </label>
+            <input
+              type="number"
+              className="form-control shadow-none focus-none py-2"
+              id="Salary"
+              defaultValue="40000"
+            />
+          </div>
+
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="OfferLetter" className="mb-0 w-100">
+              Offer Letter
+            </label>
+            <input
+              type="file"
+              className="form-control shadow-none focus-none py-2"
+              id="OfferLetter"
+              accept="application/pdf"
+            />
+          </div>
           <div className="col-sm-6 mb-3">
             <label htmlFor="PerformanceReviews" className="mb-0 w-100">
               Performance Reviews
@@ -215,7 +260,23 @@ function EditEmployee() {
               defaultValue="Completed React Certification, enrolled in Advanced Node.js course."
             ></textarea>
           </div>
-
+          <div className="col-sm-6 mb-3">
+            <label htmlFor="ProbationAgreement" className="mb-0 w-100">
+              Probation Agreement (Text or PDF)
+            </label>
+            <textarea
+              id="ProbationAgreement"
+              className="form-control shadow-none focus-none py-2 size"
+              rows={3}
+              placeholder="Enter probation agreement text or upload PDF"
+            ></textarea>
+            <input
+              type="file"
+              className="form-control shadow-none focus-none py-2 mt-2"
+              id="ProbationAgreementFile"
+              accept="application/pdf"
+            />
+          </div>
           <div className="col-12">
             <button
               type="submit"

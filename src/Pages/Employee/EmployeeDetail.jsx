@@ -27,6 +27,11 @@ function EmployeeDetail() {
       "Charlie Brown - Project Manager",
     ],
     address: "1234 Elm Street, City, Country",
+    cnic: "12345-6789012-3",
+    salary: "40000",
+    agreementPdf: "agreement.pdf",
+    offerLetter: "offer_letter.pdf",
+    probationAgreement: "probation_agreement.pdf", // or "Text of the probation agreement" for text content
   };
 
   return (
@@ -73,24 +78,34 @@ function EmployeeDetail() {
           <p>{employeeData.experienceLevel}</p>
         </div>
 
-        <div className="col-sm-6 mb-3">
-          <strong>Workload Management:</strong>
-          <p>{employeeData.workloadManagement}</p>
-        </div>
 
-        <div className="col-sm-12 mb-3">
+        <div className="col-sm-6 mb-3">
           <strong>Performance Reviews:</strong>
           <p>{employeeData.performanceReviews}</p>
         </div>
 
-        <div className="col-sm-12 mb-3">
+        <div className="col-sm-6 mb-3">
           <strong>Professional Development:</strong>
           <p>{employeeData.professionalDevelopment}</p>
         </div>
 
-        <div className="col-sm-12 mb-3">
+        <div className="col-sm-6 mb-3">
           <strong>Address:</strong>
           <p>{employeeData.address}</p>
+        </div>
+
+        <div className="col-sm-6 mb-3">
+          <strong>CNIC:</strong>
+          <p>{employeeData.cnic}</p>
+        </div>
+
+        <div className="col-sm-6 mb-3">
+          <strong>Salary:</strong>
+          <p>{employeeData.salary}</p>
+        </div>
+        <div className="col-sm-6 mb-3">
+          <strong>Workload Management:</strong>
+          <p>{employeeData.workloadManagement}</p>
         </div>
 
         <div className="col-sm-6 mb-3">
@@ -102,7 +117,7 @@ function EmployeeDetail() {
           </ul>
         </div>
 
-        <div className="col-sm-12 mb-3">
+        <div className="col-sm-6 mb-3">
           <strong>Team Members:</strong>
           <ul>
             {employeeData.teamMembers.map((member, index) => (
@@ -110,6 +125,34 @@ function EmployeeDetail() {
             ))}
           </ul>
         </div>
+        <div className="col-sm-6 mb-3">
+          <strong>Agreement PDF:</strong>
+          <p>
+            <a href={employeeData.agreementPdf} target="_blank" rel="noopener noreferrer">
+              Download Agreement
+            </a>
+          </p>
+        </div>
+
+        <div className="col-sm-6 mb-3">
+          <strong>Offer Letter:</strong>
+          <p>
+            <a href={employeeData.offerLetter} target="_blank" rel="noopener noreferrer">
+              Download Offer Letter
+            </a>
+          </p>
+        </div>
+
+        <div className="col-sm-6 mb-3">
+          <strong>Probation Agreement:</strong>
+          <p>
+            <a href={employeeData.probationAgreement} target="_blank" rel="noopener noreferrer">
+              Download Probation Agreement
+            </a>
+          </p>
+        </div>
+
+        
       </div>
     </div>
   );

@@ -62,7 +62,7 @@ const AllProjects = () => {
                   <div className="d-flex">
                   <Link
           to="/tasks"
-          className="bg-blue text-decoration-none text-white px-3 py-2 rounded-3"
+          className="bg-blue text-nowrap text-decoration-none text-white px-3 py-2 rounded-3"
         >
           View Tasks
         </Link>

@@ -93,7 +93,7 @@ function Main() {
                 <li>
                   <Link
                     to="/sales_team"
-                    className={`sidelink ${isActive(["/sales_team", "/add_sale_member", "/editedit_sale_member_manager", "/sale_member_detail"])}`}
+                    className={`sidelink ${isActive(["/sales_team", "/add_sale_member", "/edit_sale_member", "/sale_member_detail"])}`}
                   >
                     <div className="d-flex align-items-center">
                       <FaChartLine className="sideicon me-2" />
