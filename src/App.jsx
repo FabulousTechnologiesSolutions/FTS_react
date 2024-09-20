@@ -39,6 +39,7 @@ import AddTask from "./Pages/Task/AddTask";
 import EditTask from "./Pages/Task/EditTask";
 import TaskDetail from "./Pages/Task/TaskDetail";
 import AllProjects from "./Pages/Task/AllProjects";
+import Schedule from "./Pages/Schedule";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <Routes>
         <Route element={<Main />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/schedule" element={<Schedule/>} />
         
           <Route path="/settings" element={<Settings />} />
           <Route path="/reports" element={<Reports />} />
