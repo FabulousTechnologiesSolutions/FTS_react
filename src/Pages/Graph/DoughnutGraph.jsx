@@ -11,17 +11,18 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutGraph = () => {
   const data = {
-    labels: ['Blocked', 'In review', 'In Progress'],
+    labels: ['New added', 'In Conflicts', 'Completion Rate', 'Cancelation Rate'],
     datasets: [
       {
-        data: [36, 38, 25],
+        data: [36, 38, 25, 30],
         backgroundColor: [
           'rgba(54, 162, 235, 0.5)', // Blocked
           'rgba(54, 162, 235, 0.3)', // In review
-          'rgba(54, 162, 235, 1)',   // In Progress
+          'rgba(1, 95, 201, 1)',
+          'rgba(255, 84, 84, 1)'   // In Progress
         ],
         borderWidth: 0, // Removes borders between sections
-        cutout: '70%', // Creates the donut shape by cutting out the middle
+        cutout: '80%', // Creates the donut shape by cutting out the middle
       },
     ],
   };

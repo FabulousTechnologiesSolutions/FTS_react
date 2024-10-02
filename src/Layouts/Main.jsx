@@ -212,15 +212,25 @@ function Main() {
         <div className="right">
           <div className="right-top input-shadow w-100">
             <div className="d-flex align-items-center justify-content-between w-100">
-              <div className="d-flex align-items-center">
-                <span
-                  className="me-2 tog d-flex bg-blue align-items-center d-md-none pointer"
-                  onClick={toggleLeftDisplay}
-                >
-                  <GiHamburgerMenu />
-                </span>
+              <div className="d-flex align-items-center justify-content-between justify-content-sm-start w-100">
+                <div>
+                  
+                </div>
+                <div>
+                  <Link to="/dashboard" className="logodiv px-4 d-block d-sm-none">
+                    <img src={logo} alt="" className="w-100 mob-logo" />
+                  </Link>
+                </div>
+                <div>
+                  <span
+                    className="me-2 tog d-flex bg-blue align-items-center d-md-none pointer"
+                    onClick={toggleLeftDisplay}
+                  >
+                    <GiHamburgerMenu />
+                  </span>
+                </div>
               </div>
-              <div className=" d-flex align-items-center justify-content-between">
+              <div className=" d-sm-flex align-items-center justify-content-between d-none">
                 <div className="d-flex align-items-center">
                   <Link to="/" href="notification.html">
                     <img src={bell} alt="user" className="bellimg me-2" />

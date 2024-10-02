@@ -84,7 +84,8 @@
     --blue: #015FC9;
     --grey: #F0F0F4;
     --dark-blue: #111D32;
-    --lblue: #C5E0FF
+    --lblue: #C5E0FF;
+    --grey2: #667085;
 }
 
 body {
@@ -104,6 +105,17 @@ body {
     background-color: #C5E0FF;
 }
 
+.lred{
+    background-color: #FFE0E0;
+}
+
+.lprp{
+    background-color: #F0E4FF;
+    color: #4F00B2;
+}
+select:focus{
+    outline: none;
+}
 .blue{
     color: var(--blue);
 }
@@ -116,7 +128,9 @@ body {
     padding: 0 20px;
     margin: 0 auto;
 }
-
+.text-grey2{
+    color: var(--grey2);
+}
 .font-md {
     font-weight: 500;
 }
@@ -312,6 +326,7 @@ textarea {
     height: calc(100dvh - 125px);
     overflow: auto;
     padding: 5px 0;
+    overflow-x: hidden;
 }
 
 .blue-btn {
@@ -469,6 +484,49 @@ textarea {
     border-radius: 20px;
     top: 0;
 }
+.font-14{
+    font-size: 14px;
+}
+.font-12{
+    font-size: 12px;
+}
+.avt{
+    width: 30px !important;
+     height: 30px !important;
+ }
+ .avatar-group-container .MuiAvatar-root {
+    height: 30px; /* Adjust height as needed */
+    width: 30px;  /* Adjust width as needed */
+    font-size: 14px; /* Adjust font size for initials or icons if needed */
+}
+
+.new{
+    background-color: #DDF5EF;
+}
+.fog-img{
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    object-fit: cover;
+}
+
+.mob-logo{
+    max-width: 200px;
+}
+@media screen and (max-width: 1200px) {
+    .fc .fc-toolbar{
+        flex-wrap: wrap;
+    }
+    .fc-toolbar-chunk{
+        margin:6px 6px;
+    }
+    .fc-button-primary{
+        font-size: 12px !important
+    }
+    .fc-toolbar-title {
+        font-size: 14px !important
+    }
+}
 @media screen and (min-width:769px) {
     .left {
         display: block !important;
@@ -489,4 +547,17 @@ textarea {
         width: 100% !important;
     }
 
+}
+@media screen and (min-width: 576px){
+    .drop-list{
+        display: block !important;
+    }
+}
+@media screen and (max-width: 575px){
+    .drop-list{
+        position: absolute;
+        top: 59px;
+        width: 100%;
+        z-index: 4;
+    }
 }
